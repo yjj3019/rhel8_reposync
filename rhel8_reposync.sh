@@ -8,9 +8,6 @@ export repofile="/repo1/logs/reposync8.log.$totime"
 export tmppath="/root/bin/temp"
 export fpath="/repo1/rhel8.repo"
 
-### Modify Service IP
-export sip="10.65.30.103"
-
 ### yum file check
 if [ -f /var/run/yum.pid ]; then
 echo "Start Fail.. YUM Run File Found : $repofile " >> $repofile
