@@ -1,0 +1,7 @@
+rhel-8-for-x86_64-baseos-rpms
+rhel-8-for-x86_64-appstream-rpms
+ansible-2.9-for-rhel-8-x86_64-rpms
+fast-datapath-for-rhel-8-x86_64-rpms
+rhel-8-for-x86_64-highavailability-rpms
+rhel-8-for-x86_64-supplementary-rpms
+rhel-8-for-x86_64-resilientstorage-rpms
