@@ -52,10 +52,11 @@ if [ -d $repo_dir/$repos ]
 then
 	/usr/bin/reposync --nogpgcheck --newest-only --downloadcomps --download-metadata --repo $repos -p $repo_dir >> $repofile 2>&1
 	echo "" >> $repofile
-	#createrepo $repo_dir/$repos >> $repofile 2>&1
+	createrepo $repo_dir/$repos >> $repofile 2>&1
 else
 	/usr/bin/reposync --nogpgcheck --downloadcomps --download-metadata --repo $repos -p $repo_dir >> $repofile 2>&1
 	echo "" >> $repofile
+	createrepo $repo_dir/$repos >> $repofile 2>&1
 fi
 	
 ### repo file Create
