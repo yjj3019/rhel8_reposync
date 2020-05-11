@@ -63,7 +63,7 @@ fi
   echo "[$repos]" >> $fpath
   echo "name=$repos" >> $fpath
   echo "baseurl=http://$sip/$repos" >> $fpath
-  echo "enable=1" >> $fpath
+  echo "enabled=1" >> $fpath
   echo "gpgcheck=0" >> $fpath
   echo "" >> $fpath
   echo "" >> $fpath
