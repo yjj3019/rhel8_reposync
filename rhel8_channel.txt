@@ -7,3 +7,5 @@ fast-datapath-for-rhel-8-x86_64-rpms
 rhel-8-for-x86_64-highavailability-rpms
 rhel-8-for-x86_64-supplementary-rpms
 rhel-8-for-x86_64-resilientstorage-rpms
+rhel-8-for-x86_64-sap-solutions-rpms
+rhel-8-for-x86_64-sap-netweaver-rpms
