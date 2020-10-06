@@ -19,7 +19,7 @@ RUN yum update -y > /dev/null
 RUN yum install cronie createrepo yum-utils procps-ng -y > /dev/null
 RUN yum repolist --disablerepo=* && \
     yum-config-manager --disable \* > /dev/null && \
-    yum-config-manager --enable rhel-8-for-x86_64-baseos-rpms --enable rhel-8-for-x86_64-appstream-rpms --enable ansible-2.9-for-rhel-8-x86_64-rpms --enable fast-datapath-for-rhel-8-x86_64-rpms --enable rhel-8-for-x86_64-highavailability-rpms --enable rhel-8-for-x86_64-supplementary-rpms --enable rhel-8-for-x86_64-resilientstorage-rpms --enable rhel-8-for-x86_64-sap-solutions-rpms --enable rhel-8-for-x86_64-sap-netweaver-rpms > /dev/null 
+    yum-config-manager --enable rhel-8-for-x86_64-baseos-rpms --enable rhel-8-for-x86_64-appstream-rpms --enable ansible-2.9-for-rhel-8-x86_64-rpms --enable fast-datapath-for-rhel-8-x86_64-rpms --enable rhel-8-for-x86_64-highavailability-rpms --enable rhel-8-for-x86_64-supplementary-rpms --enable rhel-8-for-x86_64-resilientstorage-rpms --enable rhel-8-for-x86_64-sap-solutions-rpms --enable rhel-8-for-x86_64-sap-netweaver-rpms --enable rhel-8-for-x86_64-baseos-eus-rpms --enable rhel-8-for-x86_64-appstream-eus-rpms --enable rhel-8-for-x86_64-highavailability-eus-rpms > /dev/null 
 RUN yum clean all -y > /dev/null
 
 ### Cron Setting
