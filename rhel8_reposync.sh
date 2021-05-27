@@ -10,16 +10,17 @@ export fpath="/repo1/rhel8.repo"
 
 ### yum file check
 if [ -f /var/run/yum.pid ]; then
-echo "Start Fail.. YUM Run File Found : $repofile " >> $repofile
-echo "Time : $totime " >> $repofile
-exit 11
+	echo "Start Fail.. YUM Run File Found : $repofile " >> $repofile
+	echo "Time : $totime " >> $repofile
+	exit 11
 fi
 
 ### repofile check
-if [ -f $repofile ]; then
-echo "Found File : $repofile " >> $repofile
+if [ -f $repofile ] 
+then
+	echo "Found File : $repofile " >> $repofile
 else
-touch $repofile
+	touch $repofile
 fi
 
 ### Log Directory Check
@@ -35,6 +36,8 @@ fi
 echo "Start Time : $totime " >> $repofile
 
 ### repo file Create
+/usr/bin/rm -f $fpath
+/usr/bin/touch $fpath
 echo "#### Local Repository ####" > $fpath
 echo "#Create by : $totime" >> $fpath
 echo "" >> $fpath
@@ -52,17 +55,19 @@ if [ -d $repo_dir/$repos ]
 then
 	/usr/bin/reposync --nogpgcheck --newest-only --downloadcomps --download-metadata --repo $repos -p $repo_dir >> $repofile 2>&1
 	echo "" >> $repofile
-	createrepo $repo_dir/$repos >> $repofile 2>&1
+#	createrepo -v $repo_dir/$repos >> $repofile 2>&1
 else
 	/usr/bin/reposync --nogpgcheck --downloadcomps --download-metadata --repo $repos -p $repo_dir >> $repofile 2>&1
 	echo "" >> $repofile
-	createrepo $repo_dir/$repos >> $repofile 2>&1
+#	createrepo -v $repo_dir/$repos >> $repofile 2>&1
 fi
+
+/usr/bin/yum clean all
 	
 ### repo file Create
   echo "[$repos]" >> $fpath
   echo "name=$repos" >> $fpath
-  echo "baseurl=http://$sip/$repos" >> $fpath
+  echo "baseurl=http://${sip}/$repos" >> $fpath
   echo "enabled=1" >> $fpath
   echo "gpgcheck=0" >> $fpath
   echo "" >> $fpath
