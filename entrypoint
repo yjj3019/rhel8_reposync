@@ -1,6 +1,7 @@
 #!/bin/sh
 
 ### crond process start
-/usr/sbin/crond -n
 touch /var/log/cron.log
+chown cron.cron /var/log/cron.log
+/usr/sbin/crond -n
 
