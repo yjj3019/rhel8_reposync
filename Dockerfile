@@ -1,6 +1,5 @@
 FROM registry.redhat.io/ubi8/ubi
 MAINTAINER jjyoo@rockplace.co.kr
-LABEL "RHEL8 reposync with Podman"
 LABEL summary="RHEL8 base reposync image"
 
 ### Timezone
