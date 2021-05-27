@@ -1,1 +1,1 @@
-* 05 * * * /root/reposync/rhel8_reposync.sh
+0 05 * * * /root/reposync/rhel8_reposync.sh
