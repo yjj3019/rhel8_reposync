@@ -1,4 +1,4 @@
-FROM redhat/ubi8:latest
+FROM registry.redhat.io/ubi8/ubi
 MAINTAINER jjyoo@rockplace.co.kr
 LABEL summary="RHEL8 base reposync image"
 
